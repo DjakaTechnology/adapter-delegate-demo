@@ -28,7 +28,7 @@ object Utils {
         MessageItem(
             0,
             "Geralt",
-            "Silence, I'll let kikimora hunt you"
+            "hmmm"
         ),
         MessageItem(1, "Jaskier", ":((")
     )

@@ -21,9 +21,9 @@
         android:text="Delegate Way" />
 
     <Button
-        android:id="@+id/button_adapter_delegate_unsafe"
+        android:id="@+id/button_adapter_delegate_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(UnsafeVariance) Delegate Way" />
+        android:text="Chat" />
 
 </LinearLayout>

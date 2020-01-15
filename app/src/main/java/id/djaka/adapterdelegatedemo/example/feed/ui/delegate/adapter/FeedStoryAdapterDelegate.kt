@@ -1,4 +1,4 @@
-package id.djaka.adapterdelegatedemo.example.feed.ui.delegate.withoutholder.adapter
+package id.djaka.adapterdelegatedemo.example.feed.ui.delegate.adapter
 
 import android.view.LayoutInflater
 import android.view.View

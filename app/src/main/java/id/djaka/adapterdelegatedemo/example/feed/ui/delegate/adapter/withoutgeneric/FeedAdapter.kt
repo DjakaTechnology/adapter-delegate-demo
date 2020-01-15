@@ -1,11 +1,11 @@
-package id.djaka.adapterdelegatedemo.example.feed.ui.delegate.withoutholder.adapter.withoutgeneric
+package id.djaka.adapterdelegatedemo.example.feed.ui.delegate.adapter.withoutgeneric
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.djaka.adapterdelegatedemo.core.adapterdelegate.AdapterDelegateManager
-import id.djaka.adapterdelegatedemo.example.feed.ui.delegate.withoutholder.adapter.FeedPostAdapterDelegate
-import id.djaka.adapterdelegatedemo.example.feed.ui.delegate.withoutholder.adapter.FeedStandardAdapterDelegate
-import id.djaka.adapterdelegatedemo.example.feed.ui.delegate.withoutholder.adapter.FeedStoryAdapterDelegate
+import id.djaka.adapterdelegatedemo.example.feed.ui.delegate.adapter.FeedPostAdapterDelegate
+import id.djaka.adapterdelegatedemo.example.feed.ui.delegate.adapter.FeedStandardAdapterDelegate
+import id.djaka.adapterdelegatedemo.example.feed.ui.delegate.adapter.FeedStoryAdapterDelegate
 import id.djaka.adapterdelegatedemo.example.feed.item.FeedItem
 
 /**

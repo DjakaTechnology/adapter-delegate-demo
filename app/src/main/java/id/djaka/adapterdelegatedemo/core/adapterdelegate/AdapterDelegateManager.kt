@@ -17,7 +17,7 @@ class AdapterDelegateManager<T> {
 
     fun getItemViewType(items: List<T>, position: Int): Int {
         delegates.forEachIndexed { index, it ->  if (it.isForViewType(items, position)) return index }
-        throw IllegalStateException("Adapter Delegate for specified type not found")
+        throw IllegalStateException("Adapter Delegate for specified type at index: $position not found")
     }
 
     fun onBindViewHolder(items: List<T>, position: Int, viewHolder: RecyclerView.ViewHolder) {
