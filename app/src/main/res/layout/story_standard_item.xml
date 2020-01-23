@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="itemModel"
             type="id.djaka.adapterdelegatedemo.example.story.item.StoryItem" />
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -18,32 +20,38 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/image"
                 android:layout_width="140dp"
                 android:layout_height="0dp"
-                android:src="@color/colorPrimary"
                 android:scaleType="centerCrop"
+                android:src="@color/colorPrimary"
+                android:transitionName="image"
+                imageUrl="@{itemModel.imageUrl}"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="H,9:16"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                imageUrl="@{itemModel.imageUrl}"/>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#000"
-                android:alpha=".25"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/image_foreground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha=".25"
+                android:background="#000"
+                android:transitionName="imageForeground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_profile"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginBottom="8dp"
                 android:tint="#fff"
+                android:transitionName="imageProfile"
                 app:layout_constraintBottom_toTopOf="@id/text_author"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,10 +67,11 @@
                 android:gravity="center"
                 android:text="@{itemModel.author}"
                 android:textColor="#fff"
-                tools:text="@string/app_name"
+                android:transitionName="textAuthor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/app_name" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

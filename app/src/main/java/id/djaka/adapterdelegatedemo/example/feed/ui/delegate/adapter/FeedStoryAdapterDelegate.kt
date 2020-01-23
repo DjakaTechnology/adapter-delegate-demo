@@ -9,16 +9,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.djaka.adapterdelegatedemo.R
 import id.djaka.adapterdelegatedemo.core.adapterdelegate.AdapterDelegate
+import id.djaka.adapterdelegatedemo.databinding.StoryStandardItemBinding
 import id.djaka.adapterdelegatedemo.example.feed.item.FeedItem
 import id.djaka.adapterdelegatedemo.example.feed.item.FeedStoryItem
 import id.djaka.adapterdelegatedemo.example.story.adapter.StoryStandardAdapter
+import id.djaka.adapterdelegatedemo.example.story.item.StoryItem
 import kotlinx.android.synthetic.main.feed_story_item.view.*
 
 /**
  * Created by Djaka Pradana on 2020-01-14.
  */
 
-class FeedStoryAdapterDelegate : AdapterDelegate<FeedItem> {
+class FeedStoryAdapterDelegate(val onStoryItemClick: ((StoryStandardItemBinding, StoryItem) -> Unit)? = null) : AdapterDelegate<FeedItem> {
     override fun isForViewType(items: List<FeedItem>, position: Int): Boolean {
         return items[position] is FeedStoryItem
     }
@@ -32,7 +34,9 @@ class FeedStoryAdapterDelegate : AdapterDelegate<FeedItem> {
     }
 
     inner class ItemStoryViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        private val adapter = StoryStandardAdapter()
+        private val adapter = StoryStandardAdapter { binding: StoryStandardItemBinding, storyItem: StoryItem ->
+            onStoryItemClick?.invoke(binding, storyItem)
+        }
 
         init {
             itemView.rv_story.adapter = adapter
