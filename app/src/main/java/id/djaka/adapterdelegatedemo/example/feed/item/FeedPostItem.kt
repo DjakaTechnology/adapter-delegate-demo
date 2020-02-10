@@ -7,5 +7,6 @@ package id.djaka.adapterdelegatedemo.example.feed.item
 data class FeedPostItem(
     val author: String,
     val content: String,
-    val imageUrl: String
+    val imageUrl: String,
+    val subtitle: String
 ): FeedItem

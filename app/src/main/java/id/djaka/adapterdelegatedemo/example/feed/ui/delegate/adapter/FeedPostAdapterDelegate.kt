@@ -35,6 +35,7 @@ class FeedPostAdapterDelegate : AdapterDelegate<FeedItem> {
         fun bind(item: FeedPostItem) {
             itemView.text_author.text = item.author
             itemView.text_content.text = item.content
+            itemView.text_sub.text = item.subtitle
             Glide.with(itemView.image_main.context).load(item.imageUrl).into(itemView.image_main)
         }
     }

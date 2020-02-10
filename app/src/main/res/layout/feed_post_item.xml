@@ -7,12 +7,12 @@
 
     <ImageView
         android:id="@+id/image_profile"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/profile_size"
+        android:layout_height="@dimen/profile_size"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:tint="@color/charcoal_grey"
         app:srcCompat="@drawable/ic_user"
-        android:tint="@color/colorPrimaryDark"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -20,15 +20,29 @@
         android:id="@+id/text_author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:layout_marginEnd="16dp"
         android:text="@string/app_name"
         android:textStyle="bold"
         android:maxLines="1"
-        app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+        android:includeFontPadding="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/image_profile"
         app:layout_constraintTop_toTopOf="@id/image_profile" />
+
+    <TextView
+        android:id="@+id/text_sub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="24 hours ago"
+        android:textSize="12sp"
+        android:textColor="@color/charcoal_light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_author"
+        app:layout_constraintTop_toBottomOf="@id/text_author" />
 
     <TextView
         android:id="@+id/text_content"
@@ -36,10 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/app_name"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/text_author"
+        app:layout_constraintTop_toBottomOf="@id/text_sub"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -47,7 +60,7 @@
         android:id="@+id/image_main"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/ic_launcher_background"
         app:layout_constraintTop_toBottomOf="@id/text_content"
@@ -55,12 +68,26 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:tint="@color/white"
+        android:padding="6dp"
+        android:background="#99000000"
+        android:src="@drawable/ic_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/image_main" />
+
+    <ImageView
         android:id="@+id/image_like"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
+        android:tint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_main"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,12 +95,13 @@
 
     <ImageView
         android:id="@+id/image_dislike"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:rotation="180"
+        android:tint="@color/grey"
         app:layout_constraintStart_toEndOf="@id/image_like"
         app:layout_constraintTop_toBottomOf="@+id/image_main"
         app:layout_constraintBottom_toBottomOf="parent"

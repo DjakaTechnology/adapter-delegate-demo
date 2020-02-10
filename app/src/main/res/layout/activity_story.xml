@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
 
     <data>
 
@@ -32,7 +33,7 @@
             android:id="@+id/image_foreground"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:alpha=".25"
+            android:alpha=".0"
             android:background="#000"
             android:transitionName="imageForeground"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -42,10 +43,10 @@
 
         <ImageView
             android:id="@+id/image_profile"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/profile_size"
+            android:layout_height="@dimen/profile_size"
             android:layout_marginStart="16dp"
-            android:tint="#fff"
+            android:tint="@color/white"
             android:transitionName="imageProfile"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/text_author"
@@ -62,7 +63,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="@{itemModel.author}"
-            android:textColor="#fff"
+            android:textColor="@color/white"
             android:transitionName="textAuthor"
             app:layout_constraintStart_toEndOf="@id/image_profile"
             app:layout_constraintTop_toTopOf="parent"

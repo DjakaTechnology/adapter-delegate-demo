@@ -34,16 +34,17 @@ object Utils {
     )
 
     fun getFeedItems() = listOf(
+        FeedStandardItem(
+            "Elon Musk & Jack Ma",
+            "Alibaba Inteligence (Feed Standard)",
+            "https://image.businessinsider.com/5d67e2c22e22af0d6c167276?width=1100&format=jpeg&auto=webp",
+            "3:14"
+        ),
         FeedPostItem(
             "Chillin",
             "Hey guys cant believe this view is so good! (Feed Post)",
-            "https://cosmos-images2.imgix.net/file/spina/photo/20565/191010_nature.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835"
-        ),
-        FeedStandardItem(
-            "Elon Musk & Jack Ma",
-            "Dunno (Feed Standard)",
-            "https://image.businessinsider.com/5d67e2c22e22af0d6c167276?width=1100&format=jpeg&auto=webp",
-            "3:14"
+            "https://cosmos-images2.imgix.net/file/spina/photo/20565/191010_nature.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835",
+            "8 hours ago"
         ),
         FeedStoryItem(
           getStoryItem()
@@ -57,7 +58,8 @@ object Utils {
         FeedPostItem(
             "Coca cola",
             "Here some coca cola (Feed Post)",
-            "https://turbologo.com/articles/wp-content/uploads/2019/08/coca-cola-logo-2007.jpg"
+            "https://turbologo.com/articles/wp-content/uploads/2019/08/coca-cola-logo-2007.jpg",
+            "24 hours ago"
         )
     )
 
@@ -75,7 +77,7 @@ object Utils {
             "https://vignette.wikia.nocookie.net/witcher/images/5/51/Netflix_geralt_shirt.jpg/revision/latest?cb=20191228182240"
         ),
         StoryItem(
-            "Goose \n(don't mind me)",
+            "Goose",
             "https://upload.wikimedia.org/wikipedia/commons/3/39/Domestic_Goose.jpg"
         )
     )
